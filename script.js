@@ -56,11 +56,13 @@ $(document).ready(function(){
     }
     getData();
     var btn=document.getElementById("btn-submit")
-    btn.addEventListener("click", function(e){
-        e.preventDefault()
+    btn.addEventListener("click", function(){
         $.get("./quiz.json", function(data, status){
             let result=data
-            var q1=document.getElementsByName("q1")
+            var form=document.getElementById("form")
+            form.addEventListener("submit", function(e){
+                e.preventDefault()
+                var q1=document.getElementsByName("q1")
             var q2=document.getElementsByName("q2")
             var q3=document.getElementsByName("q3")
             var q4=document.getElementsByName("q4")
@@ -91,11 +93,13 @@ $(document).ready(function(){
                     score+=1
                 }
             }
-            var scr=document.createElement("h3")
-            var scrTxt=document.createTextNode(score+"/5")
-            scr.append(scrTxt)
-            resulthtml.append(scr)
-            modal.css("display", "block")
+                var scr=document.createElement("h3")
+                var scrTxt=document.createTextNode(score+"/5")
+                scr.append(scrTxt)
+                resulthtml.append(scr)
+                modal.css("display", "block")
+
+            })
         })
     })
     
