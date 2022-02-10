@@ -58,7 +58,7 @@ $(document).ready(function(){
     var btn=document.getElementById("btn-submit")
     btn.addEventListener("click", function(e){
         e.preventDefault()
-        $.get("http://5d76bf96515d1a0014085cf9.mockapi.io/quiz", function(data, status){
+        $.get("./quiz.json/", function(data, status){
             let result=data
             var q1=document.getElementsByName("q1")
             var q2=document.getElementsByName("q2")
