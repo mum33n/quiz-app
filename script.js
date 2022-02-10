@@ -4,7 +4,7 @@ $(document).ready(function(){
     var resulthtml=$("#result")
 
     function getData(){
-        $.get("./quiz.json/", function(data, status){
+        $.get("https://raw.githubusercontent.com/mum33n/quiz-app/main/quiz.json", function(data, status){
         var response=data;
         for (let i = 0; i < response.length; i++) {
  
