@@ -27,7 +27,7 @@ $(document).ready(function(){
                 var optionWrapper= document.createElement("div")
                 optionWrapper.classList.add("option-wrapper")
                 quiz[i].append(optionWrapper)
-
+                
                 //add label
                 const element = options[j];
                 var label= document.createElement("label")
