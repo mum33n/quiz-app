@@ -7,7 +7,7 @@ $(document).ready(function(){
         $.get("./quiz.json", function(data, status){
         var response=data;
         for (let i = 0; i < response.length; i++) {
-
+ 
             //add questions
             var question= document.createElement("h1")
             var questionTxt=document.createTextNode("Q"+(i+1)+". "+response[i].question)
