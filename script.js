@@ -4,10 +4,10 @@ $(document).ready(function(){
     var resulthtml=$("#result")
 
     function getData(){
-        $.get("https://5d76bf96515d1a0014085cf9.mockapi.io/quiz", function(data, status){
+        $.get("https://raw.githubusercontent.com/mum33n/quiz-app/main/quiz.json", function(data, status){
         var response=data;
         for (let i = 0; i < response.length; i++) {
-
+ 
             //add questions
             var question= document.createElement("h1")
             var questionTxt=document.createTextNode("Q"+(i+1)+". "+response[i].question)
@@ -27,7 +27,7 @@ $(document).ready(function(){
                 var optionWrapper= document.createElement("div")
                 optionWrapper.classList.add("option-wrapper")
                 quiz[i].append(optionWrapper)
-
+                
                 //add label
                 const element = options[j];
                 var label= document.createElement("label")
@@ -58,7 +58,7 @@ $(document).ready(function(){
     var btn=document.getElementById("btn-submit")
     btn.addEventListener("click", function(e){
         e.preventDefault()
-        $.get("http://5d76bf96515d1a0014085cf9.mockapi.io/quiz", function(data, status){
+        $.get("https://raw.githubusercontent.com/mum33n/quiz-app/main/quiz.json", function(data, status){
             let result=data
             var q1=document.getElementsByName("q1")
             var q2=document.getElementsByName("q2")
