@@ -63,36 +63,36 @@ $(document).ready(function(){
             form.addEventListener("submit", function(e){
                 e.preventDefault()
                 var q1=document.getElementsByName("q1")
-            var q2=document.getElementsByName("q2")
-            var q3=document.getElementsByName("q3")
-            var q4=document.getElementsByName("q4")
-            var q5=document.getElementsByName("q5")
-            var score =0
-            for (let j = 0; j < q1.length; j++) {
-                if(q1[j].checked && q1[j].value==result[0].answer){
-                    score+=1
+                var q2=document.getElementsByName("q2")
+                var q3=document.getElementsByName("q3")
+                var q4=document.getElementsByName("q4")
+                var q5=document.getElementsByName("q5")
+                var score =0
+                for (let j = 0; j < q1.length; j++) {
+                    if(q1[j].checked && q1[j].value==result[0].answer){
+                        score+=1
+                    }
                 }
-            }
-            for (let j = 0; j < q1.length; j++) {
-                if(q2[j].checked && q1[j].value==result[1].answer){
-                    score+=1
+                for (let j = 0; j < q1.length; j++) {
+                    if(q2[j].checked && q1[j].value==result[1].answer){
+                        score+=1
+                    }
                 }
-            }
-            for (let j = 0; j < q1.length; j++) {
-                if(q3[j].checked && q1[j].value==result[2].answer){
-                    score+=1
+                for (let j = 0; j < q1.length; j++) {
+                    if(q3[j].checked && q1[j].value==result[2].answer){
+                        score+=1
+                    }
                 }
-            }
-            for (let j = 0; j < q1.length; j++) {
-                if(q4[j].checked && q1[j].value==result[3].answer){
-                    score+=1
+                for (let j = 0; j < q1.length; j++) {
+                    if(q4[j].checked && q1[j].value==result[3].answer){
+                        score+=1
+                    }
                 }
-            }
-            for (let j = 0; j < q1.length; j++) {
-                if(q5[j].checked && q1[j].value==result[4].answer){
-                    score+=1
+                for (let j = 0; j < q1.length; j++) {
+                    if(q5[j].checked && q1[j].value==result[4].answer){
+                        score+=1
+                    }
                 }
-            }
                 var scr=document.createElement("h3")
                 var scrTxt=document.createTextNode(score+"/5")
                 scr.append(scrTxt)
